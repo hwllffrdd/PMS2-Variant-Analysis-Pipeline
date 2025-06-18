@@ -106,6 +106,8 @@ RUN chown -R rstudio:rstudio /opt/VarDictJava
 # Create reference directory and download/index reference genome
 RUN mkdir -p /home/rstudio/reference/modified_reference
 
+RUN mkdir -p /home/rstudio/results
+
 # Download hg38 chromosome 7 reference
 RUN cd /home/rstudio/reference && \
     wget -q https://hgdownload.soe.ucsc.edu/goldenPath/hg38/chromosomes/chr7.fa.gz && \
