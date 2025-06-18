@@ -1,0 +1,4 @@
+samtools: /usr/bin/samtools
+picard: /opt/tools/picard.jar
+bwa: /usr/bin/bwa
+vardict: /usr/local/bin/VarDict
