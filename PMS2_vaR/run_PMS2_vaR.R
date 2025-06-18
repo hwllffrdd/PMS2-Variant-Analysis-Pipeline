@@ -26,7 +26,7 @@ if (length(list.files(pattern = "run_PMS2_vaR.R"))== 0){
 
 # Build options list
  option_list <- list(
-   make_option(c("-t", "--tools"), type="character", default="params/tools.yaml",
+   make_option(c("-t", "--tools"), type="character", default="",
                help="Path to tools file (yaml)", metavar="character"),
    make_option(c("-b", "--bamTxt"), type="character", default="",
                help="Path to bams TXT routes. Copy all full paths of your bam files to a txt-file", metavar="character"),
@@ -34,7 +34,7 @@ if (length(list.files(pattern = "run_PMS2_vaR.R"))== 0){
                help="Full path to reference modified file (fa), with no PMS2CL sequence.", metavar="character"),
    make_option(c("-g", "--genome"), type="character", default="hg19",
                help="Assembly used hg19 or hg38", metavar="character"),
-   make_option(c("-v", "--vardictjava"), type="character", default="params/vardictjavaParams.yaml",
+   make_option(c("-v", "--vardictjava"), type="character", default="",
                help="Full path to vardict java params", metavar="character"),
    make_option(c("-o", "--outputdir"), type="character", default="",
                help="Output directory to store results", metavar="character"),
