@@ -55,9 +55,6 @@ project_directory/
 ### 3. Run Pipeline
 
 ```bash
-# Build Docker image
-docker build -t pms2_pipeline .
-
 # Start Docker container
 docker run -v $(pwd):/home/rstudio/data --rm -it -m 24g --memory-swap 24g pms2_pipeline bash
 
