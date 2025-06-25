@@ -10,14 +10,12 @@ library(stringr)
 library(knitr)
 library(purrr)
 
-# Define the results directory - modify as needed
+# Define the results directory
 args <- commandArgs(trailingOnly = TRUE)
-if (length(args) > 0) {
-  results_dir <- args[1]
-} else {
-  # Default to the current working directory
-  results_dir <- "results/PMS2_analysis_2025-03-12-run116"
+if (length(args) == 0) {
+  stop("Error: Please provide the results directory as an argument.\nUsage: Rscript compile_results_enhanced.R <results_directory>")
 }
+results_dir <- args[1]
 
 # Path to final results
 final_results_dir <- file.path(results_dir, "final_results")
